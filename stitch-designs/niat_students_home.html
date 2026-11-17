@@ -1,0 +1,815 @@
+﻿<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    name="viewport" />
+  <meta content="mobile_tab" name="shell-type" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-fixed": "#e8ddff", "on-tertiary-fixed": "#21005e", "on-primary": "#002e6a", "on-primary-fixed-variant": "#004395", "surface": "#10131a", "primary-fixed": "#d8e2ff", "primary": "#aec6ff", "tertiary-fixed-dim": "#cebdff", "surface-tint": "#aec6ff", "surface-dim": "#10131a", "tertiary-container": "#9b7fed", "secondary-fixed": "#e3dfff", "outline": "#8c90a0", "surface-variant": "#32353c", "secondary": "#c3c0ff", "on-tertiary": "#381385", "on-surface-variant": "#c2c6d6", "primary-container": "#4d8eff", "on-background": "#e1e2eb", "on-tertiary-fixed-variant": "#4f319c", "on-primary-container": "#00285d", "on-secondary": "#1f00a4", "error": "#ffb4ab", "on-secondary-container": "#b3b0ff", "outline-variant": "#424754", "background": "#10131a", "surface-container-highest": "#32353c", "on-error": "#690005", "surface-container-lowest": "#0b0e14", "error-container": "#93000a", "inverse-on-surface": "#2e3037", "primary-fixed-dim": "#aec6ff", "surface-container-low": "#191c22", "on-secondary-fixed-variant": "#3522cb", "surface-bright": "#363940", "on-secondary-fixed": "#100069", "inverse-primary": "#005ac3", "on-surface": "#e1e2eb", "on-primary-fixed": "#001a42", "on-error-container": "#ffdad6", "surface-container-high": "#272a31", "inverse-surface": "#e1e2eb", "tertiary": "#cebdff", "surface-container": "#1d2026", "secondary-fixed-dim": "#c3c0ff", "on-tertiary-container": "#31057e", "secondary-container": "#3826ce" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "margin": "2rem", "space-2xs": "0.125rem", "space-2xl": "4rem" }, fontFamily: { "display-lg": ["Manrope"], "headline-sm": ["Manrope"], "label-sm": ["Hanken Grotesk"], "code-inline": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "label-md": ["Hanken Grotesk"], "headline-lg": ["Manrope"], "headline-lg-mobile": ["Manrope"], "display-lg-mobile": ["Manrope"], "body-sm": ["Hanken Grotesk"], "headline-md": ["Manrope"], "body-md": ["Hanken Grotesk"] }, fontSize: { "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "code-inline": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.015em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } }</script>
+  <style>
+    @layer base {
+
+      html,
+      body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #10131a;
+      }
+
+      body {
+        overscroll-behavior-y: none;
+      }
+
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary/20 selection:text-primary">
+  <header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.2)]">
+    <div class="h-16 px-space-md flex items-center justify-between gap-space-sm">
+      <div class="flex items-center gap-space-sm min-w-0"><button aria-label="Navigation menu"
+          class="w-11 h-11 -ml-1 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/40 transition-colors shrink-0"
+          type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button>
+        <div class="flex items-center gap-space-xs min-w-0"><img alt="NIAT Students Logo"
+            class="h-8 w-auto object-contain shrink-0"
+            src="https://lh3.googleusercontent.com/aida/ALJJyrBsU4HAoBAdiC5Ug1BPpnSZcSR-eOlEukH7D9L6k2oQ2XnCKF7zK3azrohximtmdf5qy8NKS_9G2v4yuRoX7c-Z0bmegXTA8Dzd5Ad5a06eC_XlT0NjCGbFYxbRuRVWrAaPaNhgByKH4dH-5UOXBfXYwBrJ1NVBhmOszt_Vc0gm-Q1UTNIR3xFsCFJrgD0cHew-w_BTOwUwHi1Zjgzls4WIfat5dIrN8NK_FHEJHcqp-A" />
+          <div class="flex flex-col min-w-0 leading-tight">
+            <div class="flex items-center gap-1"><span
+                class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface truncate">NIAT</span><span
+                class="px-1.5 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm tracking-wide uppercase shrink-0">AI
+                Voice</span></div><span
+              class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline truncate">Home</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-space-xs shrink-0"><button
+          class="hidden md:flex items-center justify-center px-3 h-9 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors"
+          type="button">How It Works</button><a
+          class="w-11 h-11 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity focus:outline-none shrink-0"
+          data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuADckLpVfr6FxlWezR6TVVmvu2R8Q9IUn0NG6jiRBqiyJJHdYOWfppKAvvU-7ocPc55UD0ZvSptcn16gv7sCFeLk7pHfeg1Q6aPtru_Rx6COXshB-QzKxO8F93Hg7D4VkKgVVIWFvWYnlWhg2nn6HMjomWBKt-OJl-FLQu8C4VvgLQae5950iZRxvit0fBDnlZbBOnOVqprMIa9JedvritYxK3DcyQGlga3_x-fcMcx" /></a>
+      </div>
+    </div>
+  </header>
+  <main class="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-surface">
+    <div class="flex flex-col w-full text-on-surface">
+      <!-- Interactive Ambient Glow Backdrop (Bounded) -->
+      <div class="relative w-full overflow-hidden px-space-md py-space-lg">
+        <!-- Chromatic Ambient Halo -->
+        <div
+          class="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full bg-gradient-to-tr from-secondary-container/25 via-primary-container/20 to-tertiary-container/15 blur-3xl pointer-events-none -z-10">
+        </div>
+        <!-- 1. HERO SECTION -->
+        <section class="flex flex-col items-center text-center gap-space-md w-full max-w-xl mx-auto pt-2">
+          <!-- Announcement Pill -->
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high/90 shadow-sm backdrop-blur-md">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+            </span>
+            <span class="font-label-sm text-label-sm text-primary tracking-wide">Next-Gen Conversational Audio AI</span>
+          </div>
+          <!-- Main Headline -->
+          <h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tight text-on-surface">
+            Meet Your Personal <br />
+            <span class="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">AI
+              Teachers</span>
+          </h1>
+          <!-- Tagline & Subheading -->
+          <div class="flex flex-col gap-1.5 px-2">
+            <p class="font-label-md text-label-md font-semibold text-secondary uppercase tracking-wider">
+              Your Learning. Your Pace. Your Future.
+            </p>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto">
+              Confused about a concept? Ask your doubts naturally by voice, receive real-time explanations, and master
+              complex engineering concepts with ease.
+            </p>
+          </div>
+          <!-- Hero CTAs -->
+          <div class="flex flex-row items-center justify-center gap-3 w-full mt-1">
+            <button
+              class="flex-1 max-w-[190px] h-12 rounded-full bg-gradient-to-r from-secondary-container via-primary-container to-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-lg shadow-primary-container/25 active:scale-95 transition-all"
+              type="button">
+              <span>Start Learning</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+            <button
+              class="flex-1 max-w-[170px] h-12 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-surface-variant active:scale-95 transition-all"
+              type="button">
+              <span class="material-symbols-outlined text-[18px] text-primary">auto_stories</span>
+              <span>Explore Subjects</span>
+            </button>
+          </div>
+          <!-- Interactive Conversational Card (Hero Live Session Mockup) -->
+          <div
+            class="w-full mt-4 text-left rounded-lg bg-surface-container/90 backdrop-blur-xl shadow-xl overflow-hidden p-space-md flex flex-col gap-space-sm relative">
+            <!-- Card Header: AI Teacher Profile & Session State -->
+            <div class="flex items-center justify-between gap-2 pb-2">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <div class="relative shrink-0">
+                  <img class="w-10 h-10 rounded-full object-cover shadow-sm"
+                    data-alt="Warm and confident Indian woman professor in her late thirties with subtle spectacles wearing a minimalist dark navy blazer, soft studio lighting with subtle electric blue ambient rim light, high detail portrait photography."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9t4VZrsPtpJbp51aqVIRf-jmX6kAQuIOMy2KWQqxlKTC2BZ8tx2ne-YlNGZ8D-yfokUHSv7h3BVtQpA2esf9dko2sXtmJfdm1MZrVxJPDL8IVXihhNAkWn2xmG4nIyJjjunbwzt5wg1shZMJsrAPxynYfnBT_CZjmsbusJBl3vkjT4lsgVL9vvX_-bLSKoKtHx7ieQatE492yx_sPUfYfzSrvAqyNBjCwtqUttRhd" />
+                  <span
+                    class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_8px_rgba(77,142,255,0.8)]"></span>
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <div class="flex items-center gap-1.5">
+                    <span class="font-headline-sm text-headline-sm font-semibold truncate text-on-surface">Dr. Anita
+                      Rao</span>
+                    <span class="material-symbols-outlined text-[16px] text-primary"
+                      style="font-variation-settings: 'FILL' 1;">verified</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant truncate">Physics AI Specialist â€¢
+                    NIAT</span>
+                </div>
+              </div>
+              <div
+                class="px-2.5 py-1 rounded-full bg-primary-container/20 text-primary flex items-center gap-1.5 shrink-0">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                <span class="font-label-sm text-label-sm font-medium">Live Voice</span>
+              </div>
+            </div>
+            <!-- Realtime Reactive Audio Waveform Visualizer -->
+            <div
+              class="w-full h-8 px-3 rounded-full bg-surface-container-lowest/80 flex items-center justify-between gap-1 overflow-hidden">
+              <div class="flex items-center gap-1 w-full justify-center h-full">
+                <span class="w-1 rounded-full bg-primary/40 h-2 animate-[pulse_1.1s_ease-in-out_infinite]"></span>
+                <span class="w-1 rounded-full bg-primary/70 h-4 animate-[pulse_0.8s_ease-in-out_infinite]"></span>
+                <span class="w-1 rounded-full bg-primary h-6 animate-[pulse_1.4s_ease-in-out_infinite]"></span>
+                <span
+                  class="w-1 rounded-full bg-secondary-fixed-dim h-3 animate-[pulse_0.9s_ease-in-out_infinite]"></span>
+                <span
+                  class="w-1 rounded-full bg-primary-container h-5 animate-[pulse_1.2s_ease-in-out_infinite]"></span>
+                <span class="w-1 rounded-full bg-tertiary h-7 animate-[pulse_0.7s_ease-in-out_infinite]"></span>
+                <span class="w-1 rounded-full bg-primary h-4 animate-[pulse_1.3s_ease-in-out_infinite]"></span>
+                <span
+                  class="w-1 rounded-full bg-primary-container h-6 animate-[pulse_1.0s_ease-in-out_infinite]"></span>
+                <span
+                  class="w-1 rounded-full bg-secondary-fixed-dim h-2 animate-[pulse_1.5s_ease-in-out_infinite]"></span>
+                <span class="w-1 rounded-full bg-primary h-5 animate-[pulse_0.8s_ease-in-out_infinite]"></span>
+                <span
+                  class="w-1 rounded-full bg-tertiary-container h-3 animate-[pulse_1.1s_ease-in-out_infinite]"></span>
+                <span class="w-1 rounded-full bg-primary/50 h-2 animate-[pulse_1.2s_ease-in-out_infinite]"></span>
+              </div>
+              <span
+                class="font-code-inline text-code-inline text-on-surface-variant shrink-0 pl-1 text-[11px]">00:18</span>
+            </div>
+            <!-- Student Question Dialogue Bubble -->
+            <div class="flex items-start gap-2 max-w-[90%] self-end">
+              <div class="p-3 rounded-2xl rounded-tr-xs bg-primary-container text-on-primary-container shadow-md">
+                <p class="font-body-md text-body-md font-medium leading-snug">
+                  "Why does light bend when entering water?"
+                </p>
+              </div>
+              <span class="material-symbols-outlined text-[18px] text-on-surface-variant mt-2 shrink-0">person</span>
+            </div>
+            <!-- AI Teacher Clarification Bubble -->
+            <div class="flex items-start gap-2 max-w-[95%]">
+              <div
+                class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 mt-1">
+                <span class="material-symbols-outlined text-[16px] text-primary">psychology</span>
+              </div>
+              <div
+                class="p-3.5 rounded-2xl rounded-tl-xs bg-surface-container-high text-on-surface shadow-sm flex flex-col gap-2">
+                <div class="flex items-center gap-2 text-primary font-label-sm text-label-sm">
+                  <button
+                    class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center active:scale-90 transition-transform shadow-sm"
+                    type="button">
+                    <span class="material-symbols-outlined text-[14px]">pause</span>
+                  </button>
+                  <span>Playing Teacher Explanation</span>
+                </div>
+                <p class="font-body-md text-body-md leading-relaxed text-on-surface">
+                  "Great question! When light passes from air into water, it slows down because water is optically
+                  denser. This speed change at the interface causes the wave front to pivot, governed by <span
+                    class="text-primary font-semibold">Snell's Law (nâ‚ sin Î¸â‚ = nâ‚‚ sin Î¸â‚‚)</span>."
+                </p>
+              </div>
+            </div>
+            <!-- Quick Interactive Teacher Chips -->
+            <div class="flex items-center gap-2 overflow-x-auto pt-1 pb-0.5 no-scrollbar">
+              <button
+                class="px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface hover:bg-surface-variant font-label-sm text-label-sm whitespace-nowrap active:scale-95 transition-all flex items-center gap-1"
+                type="button">
+                <span class="material-symbols-outlined text-[14px]">repeat</span>
+                <span>Explain simply</span>
+              </button>
+              <button
+                class="px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface hover:bg-surface-variant font-label-sm text-label-sm whitespace-nowrap active:scale-95 transition-all flex items-center gap-1"
+                type="button">
+                <span class="material-symbols-outlined text-[14px]">functions</span>
+                <span>Show formula</span>
+              </button>
+              <button
+                class="px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface-variant hover:text-on-surface hover:bg-surface-variant font-label-sm text-label-sm whitespace-nowrap active:scale-95 transition-all flex items-center gap-1"
+                type="button">
+                <span class="material-symbols-outlined text-[14px]">lightbulb</span>
+                <span>Real-world example</span>
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- 2. FEATURE SECTION -->
+        <section class="flex flex-col gap-space-md w-full max-w-xl mx-auto mt-space-xl">
+          <div class="flex flex-col gap-1">
+            <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Built for
+              Engineering Clarity</span>
+            <h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tight text-on-surface">
+              Everything You Need to Learn Better
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Purpose-built AI pedagogical tools tuned specifically for NIAT students facing rigorous syllabi and
+              competitive exams.
+            </p>
+          </div>
+          <!-- Feature Grid -->
+          <div class="grid grid-cols-1 gap-3.5 mt-2">
+            <!-- Feature 1 -->
+            <div
+              class="p-space-md rounded-lg bg-surface-container-low shadow-sm flex flex-col gap-2.5 relative overflow-hidden group">
+              <div
+                class="w-11 h-11 rounded-full bg-gradient-to-tr from-primary-container/20 to-primary/30 flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[24px]">mic_double</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                Voice-Based Learning
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Speak naturally just like you would in a 1-on-1 tutoring session. Instant speech-to-speech with natural
+                cadence, conversational pauses, and accent flexibility.
+              </p>
+              <div class="flex items-center gap-1 text-primary font-label-sm text-label-sm pt-1">
+                <span>Try voice clarification</span>
+                <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+              </div>
+            </div>
+            <!-- Feature 2 -->
+            <div class="p-space-md rounded-lg bg-surface-container-low shadow-sm flex flex-col gap-2.5">
+              <div
+                class="w-11 h-11 rounded-full bg-gradient-to-tr from-secondary-container/25 to-secondary/30 flex items-center justify-center text-secondary">
+                <span class="material-symbols-outlined text-[24px]">electric_bolt</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                Instant Doubt Clarification
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                24/7 instant breakdown with step-by-step mathematical derivations, algorithmic trace diagrams, and
+                structured conceptual flashcards.
+              </p>
+              <div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm pt-1">
+                <span>View derivations engine</span>
+                <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+              </div>
+            </div>
+            <!-- Feature 3 -->
+            <div class="p-space-md rounded-lg bg-surface-container-low shadow-sm flex flex-col gap-2.5">
+              <div
+                class="w-11 h-11 rounded-full bg-gradient-to-tr from-tertiary-container/25 to-tertiary/30 flex items-center justify-center text-tertiary">
+                <span class="material-symbols-outlined text-[24px]">school</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                Subject-Wise AI Teachers
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Specialized faculty personas trained specifically on your NIAT syllabus, previous semester exams, and
+                lab practical benchmarks.
+              </p>
+              <div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm pt-1">
+                <span>Explore all departments</span>
+                <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+              </div>
+            </div>
+            <!-- Feature 4 -->
+            <div class="p-space-md rounded-lg bg-surface-container-low shadow-sm flex flex-col gap-2.5">
+              <div
+                class="w-11 h-11 rounded-full bg-gradient-to-tr from-primary-container/20 to-secondary/20 flex items-center justify-center text-primary-fixed">
+                <span class="material-symbols-outlined text-[24px]">tune</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                Personalized Learning Curves
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Dynamically adapts explanation depth to your current understanding level, offering automated revision
+                audio summaries and weak-spot alerts.
+              </p>
+              <div class="flex items-center gap-1 text-primary font-label-sm text-label-sm pt-1">
+                <span>Check student mastery analytics</span>
+                <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 3. HOW IT WORKS (Interactive 4-Step Process) -->
+        <section class="flex flex-col gap-space-md w-full max-w-xl mx-auto mt-space-xl">
+          <div class="flex flex-col gap-1 text-center items-center">
+            <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Frictionless
+              Experience</span>
+            <h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tight text-on-surface">
+              How It Works in 4 Steps
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+              Go from question to complete crystal-clear understanding in less than 30 seconds.
+            </p>
+          </div>
+          <div class="flex flex-col gap-3 relative mt-2">
+            <!-- Step 1 -->
+            <div class="flex items-start gap-3.5 p-space-md rounded-lg bg-surface-container shadow-sm">
+              <div
+                class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-label-md shrink-0 shadow-md">
+                1
+              </div>
+              <div class="flex flex-col gap-1">
+                <h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Select Your Subject</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Pick from Engineering Physics, Data Structures, Multivariable Calculus, or Digital Electronics.
+                </p>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="flex items-start gap-3.5 p-space-md rounded-lg bg-surface-container shadow-sm">
+              <div
+                class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-label-md shrink-0 shadow-md">
+                2
+              </div>
+              <div class="flex flex-col gap-1">
+                <h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Choose Your Section</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Target specific syllabus units, midterm preparation sets, or laboratory assignments.
+                </p>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="flex items-start gap-3.5 p-space-md rounded-lg bg-surface-container shadow-sm">
+              <div
+                class="w-9 h-9 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-label-md shrink-0 shadow-md">
+                3
+              </div>
+              <div class="flex flex-col gap-1">
+                <h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Ask Your Doubt</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Tap the luminous voice trigger to speak naturally, or type mathematical formulas and upload diagrams.
+                </p>
+              </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="flex items-start gap-3.5 p-space-md rounded-lg bg-surface-container shadow-sm">
+              <div
+                class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-label-md shrink-0 shadow-md">
+                4
+              </div>
+              <div class="flex flex-col gap-1">
+                <h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Listen and Master</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Experience clear, patient voice explanations with companion notes, derivations, and follow-up drills.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 4. MEET YOUR 5 DEDICATED AI TEACHERS -->
+        <section class="flex flex-col gap-space-md w-full max-w-xl mx-auto mt-space-xl">
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center justify-between">
+              <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Faculty
+                Roster</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">5 Active Mentors</span>
+            </div>
+            <h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tight text-on-surface">
+              Meet Your Dedicated AI Faculty
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Each professor persona is specialized in core technical disciplines with distinct teaching temperaments.
+            </p>
+          </div>
+          <!-- Teacher Cards List -->
+          <div class="flex flex-col gap-3 mt-1">
+            <!-- Teacher 1: Dr. Anita Rao -->
+            <div class="p-space-md rounded-lg bg-surface-container-high/80 shadow-md flex flex-col gap-3">
+              <div class="flex items-center gap-3">
+                <img class="w-13 h-13 rounded-full object-cover shrink-0"
+                  data-alt="Close up profile photo of Dr Anita Rao, professional Indian physics academic woman, friendly smile, framed dark spectacles, modern dark academia backdrop, studio photography."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJWmCRygzJG4wTkeSVJ0nJtoNdllCSV0kONv0jBsONLrN_0VLWRFQgTIR9uj3TA2dZ3PuAmu3OkpvOhwIKaDYOh7L8SgouFymkZOZrYdRzfBBAyOtqFsaH8Ti2YEZNC9-rSC6938M6CdGDTtG9ma_B2jaC4z3IKyDgVFFICLEKSxJyAhanv0A3kCCJ1dD-hnCoiX_Zzm9YYlD8o0RRRXa3aisykQW4Seu5y8WAvWJj" />
+                <div class="flex flex-col min-w-0 flex-1">
+                  <div class="flex items-center justify-between gap-1">
+                    <h4 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Dr. Anita Rao</h4>
+                    <span
+                      class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm shrink-0">Physics</span>
+                  </div>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant truncate">Engineering Physics &amp; Optics
+                  </p>
+                  <div class="flex items-center gap-2 mt-0.5">
+                    <span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+                      <span class="material-symbols-outlined text-[13px]">volume_up</span> Warm, Analytical
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="px-3 py-2 rounded-md bg-surface-container-lowest text-on-surface-variant font-body-sm text-body-sm">
+                <span class="text-on-surface font-medium">Core Expertise:</span> Snell's Law, Wave Mechanics, Laser
+                Optics, Quantum Physics.
+              </div>
+              <div class="flex items-center justify-between gap-2 pt-1">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">4.9/5 Rating (1.8k Sessions)</span>
+                <button
+                  class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-all shadow-sm"
+                  type="button">
+                  <span class="material-symbols-outlined text-[16px]">mic</span>
+                  <span>Talk Now</span>
+                </button>
+              </div>
+            </div>
+            <!-- Teacher 2: Prof. Vikram Mehta -->
+            <div class="p-space-md rounded-lg bg-surface-container-high/80 shadow-md flex flex-col gap-3">
+              <div class="flex items-center gap-3">
+                <img class="w-13 h-13 rounded-full object-cover shrink-0"
+                  data-alt="Portrait photo of Prof Vikram Mehta, senior mathematics professor with salt and pepper hair, thoughtful and sharp expression, dark graphite aesthetic studio shot."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgfK0gpgYU8k_lO6AYChMES9XpND4R7Je7joOMOCNN74IY8qV27ALifEWjPI0fBYdo5S9D129XnETeU-K9AetuEhP5KOV1t8TwLNqJ0WRFhr2QUhhHKvps32TTD6bCVKkWW4d-FASpQJVTxpK0MU04lF-wKjzm2D_66Kog8ksTeIElJnmYcJ-gKE3fN9mZjNnqyA0zYsJd5R_JAGXIV81RHMNhxSzmGAR4SvWDdMOy" />
+                <div class="flex flex-col min-w-0 flex-1">
+                  <div class="flex items-center justify-between gap-1">
+                    <h4 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Prof. Vikram Mehta
+                    </h4>
+                    <span
+                      class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm shrink-0">Calculus</span>
+                  </div>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant truncate">Advanced Mathematics &amp;
+                    Algebra</p>
+                  <div class="flex items-center gap-2 mt-0.5">
+                    <span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+                      <span class="material-symbols-outlined text-[13px]">volume_up</span> Crisp, Methodical
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="px-3 py-2 rounded-md bg-surface-container-lowest text-on-surface-variant font-body-sm text-body-sm">
+                <span class="text-on-surface font-medium">Core Expertise:</span> Differential Equations, Linear Algebra,
+                Laplace Transforms.
+              </div>
+              <div class="flex items-center justify-between gap-2 pt-1">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">4.95/5 Rating (2.4k Sessions)</span>
+                <button
+                  class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-all shadow-sm"
+                  type="button">
+                  <span class="material-symbols-outlined text-[16px]">mic</span>
+                  <span>Talk Now</span>
+                </button>
+              </div>
+            </div>
+            <!-- Teacher 3: Priya Sharma -->
+            <div class="p-space-md rounded-lg bg-surface-container-high/80 shadow-md flex flex-col gap-3">
+              <div class="flex items-center gap-3">
+                <img class="w-13 h-13 rounded-full object-cover shrink-0"
+                  data-alt="Portrait of Priya Sharma, enthusiastic young woman computer science lecturer in tech apparel, smiling warmly, glowing neon workstation light in the background, sharp portrait."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuArd2rdyh5B5Du6Q1SVWCpZ2OGFMFE27_mIfaOebt-Odo1fWqu3ePih172mVvvhj-Axwm3H_6zUYlrGEAf3rV-zy-hK_9aIR4TnjH1h-92uL3QA-jQrrnqoZCdP3NA8u0DKluYUoegnfzdRBEJRgSwagTbnVO7l8MayIIeCPf7V9QyfUrT8tszNzH9Gldrx4lex3jdE7o7yjJiuHEoGykQEWbyugGSh9cQpmGg4xBfx" />
+                <div class="flex flex-col min-w-0 flex-1">
+                  <div class="flex items-center justify-between gap-1">
+                    <h4 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Priya Sharma</h4>
+                    <span
+                      class="px-2 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm shrink-0">Algorithms</span>
+                  </div>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant truncate">Data Structures &amp; C++ /
+                    Python</p>
+                  <div class="flex items-center gap-2 mt-0.5">
+                    <span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+                      <span class="material-symbols-outlined text-[13px]">volume_up</span> Energetic, Practical
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="px-3 py-2 rounded-md bg-surface-container-lowest text-on-surface-variant font-body-sm text-body-sm">
+                <span class="text-on-surface font-medium">Core Expertise:</span> Binary Trees, Graphs, Dynamic
+                Programming, Big-O Complexity.
+              </div>
+              <div class="flex items-center justify-between gap-2 pt-1">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">4.88/5 Rating (3.1k Sessions)</span>
+                <button
+                  class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-all shadow-sm"
+                  type="button">
+                  <span class="material-symbols-outlined text-[16px]">mic</span>
+                  <span>Talk Now</span>
+                </button>
+              </div>
+            </div>
+            <!-- Teacher 4: Dr. Rajesh Iyer -->
+            <div class="p-space-md rounded-lg bg-surface-container-high/80 shadow-md flex flex-col gap-3">
+              <div class="flex items-center gap-3">
+                <img class="w-13 h-13 rounded-full object-cover shrink-0"
+                  data-alt="Portrait of Dr Rajesh Iyer, middle aged electronics engineering professor, confident and thoughtful expression, modern robotics lab backdrop, cinematic lighting."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7nOrc7PTVbV9d4te0zohA8BFmUMpJKavv19eEt2GGcTIIEh-FkqYNnwFSv4OAEinQdQg7HwGMIHiCMsM2ReRoJVvPc_mmd8_d0BTbk8zvY_tRwe6AHMZkKdNXE9i3tx7FnnCVcRizrdkRt-DGIZbS0v0Aj9B8hbSIiAdK5CBZ0ljbMabpKCdGlezhDdq6Kft-y-_h9o2kdScO4kUW8vdx5wAKstDnJWS45_LR95lV" />
+                <div class="flex flex-col min-w-0 flex-1">
+                  <div class="flex items-center justify-between gap-1">
+                    <h4 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Dr. Rajesh Iyer
+                    </h4>
+                    <span
+                      class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm shrink-0">Circuits</span>
+                  </div>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant truncate">Digital Electronics &amp;
+                    Microprocessors</p>
+                  <div class="flex items-center gap-2 mt-0.5">
+                    <span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+                      <span class="material-symbols-outlined text-[13px]">volume_up</span> Deep, Explanatory
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="px-3 py-2 rounded-md bg-surface-container-lowest text-on-surface-variant font-body-sm text-body-sm">
+                <span class="text-on-surface font-medium">Core Expertise:</span> Boolean Algebra, K-Maps, 8085
+                Microprocessors, Flip-Flops.
+              </div>
+              <div class="flex items-center justify-between gap-2 pt-1">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">4.92/5 Rating (1.4k Sessions)</span>
+                <button
+                  class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-all shadow-sm"
+                  type="button">
+                  <span class="material-symbols-outlined text-[16px]">mic</span>
+                  <span>Talk Now</span>
+                </button>
+              </div>
+            </div>
+            <!-- Teacher 5: Sarah Jenkins -->
+            <div class="p-space-md rounded-lg bg-surface-container-high/80 shadow-md flex flex-col gap-3">
+              <div class="flex items-center gap-3">
+                <img class="w-13 h-13 rounded-full object-cover shrink-0"
+                  data-alt="Portrait of Sarah Jenkins, British technical communication coach, friendly and articulate demeanor, bright modern office studio background, soft warm illumination."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuByWlXJ6_VIKQSgYmsoxmUal6-kA5PT-YPbc1mkOWuvME5x5T0cQHQtnjCvuBqZ-jVpWWT-wpceYKNJ1dweTR41pXdMke0twfUi9th0U7-uy54roFcyRV_WcnF07hsDesUgMSBObdGuUpSPm__6XrlD2HQWlqvNvF_disBDrIY5ErEJ7tkyLmwqX58x88GF-dMVzJV9kCm1Bx8biemMYPAFDXfWSDVXfc_d_qEgqQ60" />
+                <div class="flex flex-col min-w-0 flex-1">
+                  <div class="flex items-center justify-between gap-1">
+                    <h4 class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Sarah Jenkins</h4>
+                    <span
+                      class="px-2 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm shrink-0">Viva
+                      &amp; English</span>
+                  </div>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant truncate">Technical Communication &amp;
+                    Viva Prep</p>
+                  <div class="flex items-center gap-2 mt-0.5">
+                    <span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+                      <span class="material-symbols-outlined text-[13px]">volume_up</span> Expressive, Friendly
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="px-3 py-2 rounded-md bg-surface-container-lowest text-on-surface-variant font-body-sm text-body-sm">
+                <span class="text-on-surface font-medium">Core Expertise:</span> Viva Voce Mock Defense, Research Paper
+                Writing, Seminar Delivery.
+              </div>
+              <div class="flex items-center justify-between gap-2 pt-1">
+                <span class="font-label-sm text-label-sm text-on-surface-variant">4.89/5 Rating (950 Sessions)</span>
+                <button
+                  class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-all shadow-sm"
+                  type="button">
+                  <span class="material-symbols-outlined text-[16px]">mic</span>
+                  <span>Talk Now</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 5. LIVE INTERACTIVE VOICE DEMO BANNER -->
+        <section class="w-full max-w-xl mx-auto mt-space-xl">
+          <div
+            class="p-space-lg rounded-xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-low shadow-xl relative overflow-hidden flex flex-col gap-space-md">
+            <!-- Radial Ambient Accent -->
+            <div
+              class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-primary-container/20 blur-2xl pointer-events-none">
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[20px]">graphic_eq</span>
+                <span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-primary">Interactive
+                  Voice Simulation</span>
+              </div>
+              <span
+                class="px-2 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm">Try
+                it now</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+                "What is the average time complexity of searching in a Binary Search Tree?"
+              </h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Tap to test how Priya Sharma breaks down worst-case vs balanced BST depths in real-time speech.
+              </p>
+            </div>
+            <!-- Simulated Voice Playback & Speed Controls -->
+            <div class="p-3.5 rounded-lg bg-surface-container-lowest/90 backdrop-blur-md flex flex-col gap-3">
+              <div class="flex items-center justify-between gap-3">
+                <button
+                  class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-md active:scale-95 transition-transform"
+                  id="simPlayBtn" onclick="toggleSimulatedAudio()" type="button">
+                  <span class="material-symbols-outlined text-[20px]" id="simPlayIcon">play_arrow</span>
+                </button>
+                <div class="flex-1 flex flex-col gap-1 min-w-0">
+                  <div class="flex items-center justify-between text-[11px] font-code-inline text-on-surface-variant">
+                    <span id="simTimeCode">0:04 / 0:26</span>
+                    <span class="text-primary font-medium">Priya Sharma AI</span>
+                  </div>
+                  <div class="w-full h-1.5 rounded-full bg-surface-variant overflow-hidden">
+                    <div
+                      class="h-full bg-gradient-to-r from-primary-container to-primary rounded-full transition-all duration-300"
+                      id="simProgressBar" style="width: 25%;"></div>
+                  </div>
+                </div>
+                <!-- Audio Speed Toggle Buttons -->
+                <div class="flex items-center rounded-full bg-surface-container-high p-0.5 shrink-0">
+                  <button
+                    class="px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface bg-surface-variant shadow-xs"
+                    type="button">1x</button>
+                  <button
+                    class="px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface"
+                    type="button">1.25x</button>
+                  <button
+                    class="px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface"
+                    type="button">1.5x</button>
+                </div>
+              </div>
+              <!-- Highlight Transcript Sync -->
+              <div
+                class="p-2.5 rounded-md bg-surface-container text-body-sm font-body-sm leading-relaxed text-on-surface-variant">
+                <span class="text-primary font-semibold">"In a balanced BST,</span> <span
+                  class="bg-primary-container/30 text-on-primary-fixed px-1 rounded">the average search complexity is
+                  O(log n)</span> because each branch halves the search space. However, if the tree is skewed, it
+                degrades to O(n)."
+              </div>
+            </div>
+            <button
+              class="w-full py-3 rounded-full bg-gradient-to-r from-secondary-container to-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 active:scale-95 transition-all shadow-md"
+              type="button">
+              <span class="material-symbols-outlined text-[18px]">mic</span>
+              <span>Tap to Ask Your Own Question</span>
+            </button>
+          </div>
+        </section>
+        <!-- 6. FINAL CTA SECTION -->
+        <section
+          class="flex flex-col gap-space-md w-full max-w-xl mx-auto mt-space-xl p-space-lg rounded-xl bg-surface-container-high text-center items-center shadow-lg relative overflow-hidden">
+          <!-- Glow element -->
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent pointer-events-none">
+          </div>
+          <img alt="NIAT Students Logo" class="w-14 h-14 rounded-full object-contain shadow-md"
+            src="https://lh3.googleusercontent.com/aida/ALJJyrBsU4HAoBAdiC5Ug1BPpnSZcSR-eOlEukH7D9L6k2oQ2XnCKF7zK3azrohximtmdf5qy8NKS_9G2v4yuRoX7c-Z0bmegXTA8Dzd5Ad5a06eC_XlT0NjCGbFYxbRuRVWrAaPaNhgByKH4dH-5UOXBfXYwBrJ1NVBhmOszt_Vc0gm-Q1UTNIR3xFsCFJrgD0cHew-w_BTOwUwHi1Zjgzls4WIfat5dIrN8NK_FHEJHcqp-A" />
+          <div class="flex flex-col gap-1.5 max-w-md">
+            <h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tight text-on-surface">
+              Start Your Learning Journey Today
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Join thousands of NIAT students excelling in coursework, viva examinations, and semester benchmarks with
+              24/7 personal AI guidance.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-2.5 w-full mt-2">
+            <button
+              class="w-full sm:w-auto px-8 h-12 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all"
+              type="button">
+              <span>Get Started Free</span>
+              <span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+            </button>
+            <button
+              class="w-full sm:w-auto px-6 h-12 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-surface-variant active:scale-95 transition-all"
+              type="button">
+              <span class="material-symbols-outlined text-[18px] text-primary">groups</span>
+              <span>Join Student Community</span>
+            </button>
+          </div>
+          <!-- Quick Trust Indicators -->
+          <div class="flex items-center justify-center gap-4 pt-2 text-on-surface-variant font-label-sm text-label-sm">
+            <div class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+              <span>Verified NIAT Syllabus</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px] text-primary">speed</span>
+              <span>&lt;200ms Voice Latency</span>
+            </div>
+          </div>
+        </section>
+        <!-- 7. COMPREHENSIVE FOOTER -->
+        <footer
+          class="flex flex-col gap-space-md w-full max-w-xl mx-auto mt-space-xl pt-space-md pb-6 text-on-surface-variant">
+          <div class="flex flex-col gap-3">
+            <div class="flex items-center gap-2">
+              <img alt="NIAT Students Logo" class="w-8 h-8 rounded-full object-contain"
+                src="https://lh3.googleusercontent.com/aida/ALJJyrBsU4HAoBAdiC5Ug1BPpnSZcSR-eOlEukH7D9L6k2oQ2XnCKF7zK3azrohximtmdf5qy8NKS_9G2v4yuRoX7c-Z0bmegXTA8Dzd5Ad5a06eC_XlT0NjCGbFYxbRuRVWrAaPaNhgByKH4dH-5UOXBfXYwBrJ1NVBhmOszt_Vc0gm-Q1UTNIR3xFsCFJrgD0cHew-w_BTOwUwHi1Zjgzls4WIfat5dIrN8NK_FHEJHcqp-A" />
+              <span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">NIAT
+                STUDENTS</span>
+            </div>
+            <p class="font-body-sm text-body-sm max-w-sm">
+              AI Voice Doubt Clarification Platform. Empowering future engineers and researchers with instant verbal
+              comprehension and faculty mentorship.
+            </p>
+          </div>
+          <!-- Quick Footer Links Grid -->
+          <div class="grid grid-cols-2 gap-4 pt-2 font-label-md text-label-md">
+            <div class="flex flex-col gap-2">
+              <span class="font-bold text-on-surface text-label-sm uppercase tracking-wider">Academics</span>
+              <a class="hover:text-primary transition-colors" href="#">Engineering Physics</a>
+              <a class="hover:text-primary transition-colors" href="#">Data Structures</a>
+              <a class="hover:text-primary transition-colors" href="#">Calculus &amp; ODE</a>
+              <a class="hover:text-primary transition-colors" href="#">Digital Circuits</a>
+            </div>
+            <div class="flex flex-col gap-2">
+              <span class="font-bold text-on-surface text-label-sm uppercase tracking-wider">Platform</span>
+              <a class="hover:text-primary transition-colors" href="#">About NIAT AI</a>
+              <a class="hover:text-primary transition-colors" href="#">Student Helpdesk</a>
+              <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+              <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+            </div>
+          </div>
+          <!-- Signature & Copyright -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-2 pt-6 font-label-sm text-label-sm">
+            <span>Â© 2025 NIAT Students. All rights reserved.</span>
+            <span class="flex items-center gap-1 text-primary">
+              <span>Crafted for NIAT Students with</span>
+              <span class="material-symbols-outlined text-[14px] text-error"
+                style="font-variation-settings: 'FILL' 1;">favorite</span>
+            </span>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      // Micro-interaction for Simulated Audio Demo Toggle
+      function toggleSimulatedAudio() {
+        const icon = document.getElementById('simPlayIcon');
+        const bar = document.getElementById('simProgressBar');
+        const timeCode = document.getElementById('simTimeCode');
+
+        if (icon && icon.textContent === 'play_arrow') {
+          icon.textContent = 'pause';
+          if (bar) bar.style.width = '70%';
+          if (timeCode) timeCode.textContent = '0:18 / 0:26';
+        } else if (icon) {
+          icon.textContent = 'play_arrow';
+          if (bar) bar.style.width = '25%';
+          if (timeCode) timeCode.textContent = '0:04 / 0:26';
+        }
+      }
+    </script>
+  </main>
+  <nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-2xl shadow-[0_-4px_24px_rgba(0,0,0,0.4)]"
+    data-active-classes="text-primary font-bold">
+    <div class="relative flex justify-around items-center h-16 px-space-xs max-w-lg mx-auto"><a aria-current="page"
+        class="flex flex-col items-center justify-center flex-1 h-full min-w-[44px] transition-colors text-primary font-bold"
+        data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span
+          class="font-label-sm text-label-sm mt-0.5">Home</span></a><a
+        class="flex flex-col items-center justify-center flex-1 h-full min-w-[44px] text-on-surface-variant transition-colors"
+        data-path="subjects" href="#"><span class="material-symbols-outlined text-[24px]">auto_stories</span><span
+          class="font-label-sm text-label-sm mt-0.5">Subjects</span></a>
+      <div class="flex flex-col items-center justify-center flex-1 relative -top-3"><a
+          class="w-14 h-14 rounded-full bg-gradient-to-tr from-secondary-container via-primary-container to-primary flex items-center justify-center text-on-primary shadow-[0_0_24px_rgba(77,142,255,0.45)] hover:shadow-[0_0_32px_rgba(77,142,255,0.7)] transition-all hover:scale-105 active:scale-95"
+          data-path="voice-doubt" href="#"><span
+            class="material-symbols-outlined text-[28px] text-on-primary-container">mic</span></a><span
+          class="font-label-sm text-label-sm text-on-surface-variant mt-1">Doubt</span></div><a
+        class="flex flex-col items-center justify-center flex-1 h-full min-w-[44px] text-on-surface-variant transition-colors"
+        data-path="teachers" href="#"><span class="material-symbols-outlined text-[24px]">psychology</span><span
+          class="font-label-sm text-label-sm mt-0.5">Teachers</span></a><a
+        class="flex flex-col items-center justify-center flex-1 h-full min-w-[44px] text-on-surface-variant transition-colors"
+        data-path="profile" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span
+          class="font-label-sm text-label-sm mt-0.5">Profile</span></a>
+    </div>
+  </nav>
+</body>
+
+</html>

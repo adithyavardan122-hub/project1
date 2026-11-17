@@ -1,0 +1,158 @@
+{
+  "subjects": [
+    {
+      "id": "aptitude",
+      "name": "Aptitude",
+      "teacherName": "kusuma sri",
+      "teacherRole": "Quantitative Aptitude & Logical Reasoning Specialist",
+      "teacherImage": "https://kommodo.ai/i/CiQyXTkUCuL2nL3Mn2Lc",
+      "description": "Master quantitative reasoning, speed math, logical patterns, and problem-solving tricks for top tier campus placements.",
+      "voiceConfig": {
+        "provider": "elevenlabs",
+        "voiceId": "aptitude_rajesh_v1",
+        "voiceName": "kusuma(mentior)",
+        "status": "configured",
+        "audioSampleUrl": "/uploads/audio/aptitude_sample.mp3",
+        "pitch": 1,
+        "rate": 1.05
+      },
+      "sections": [
+        "Number System",
+        "Percentages",
+        "Profit and Loss",
+        "Simple Interest",
+        "Compound Interest",
+        "Time and Work",
+        "Time, Speed and Distance",
+        "Ratio and Proportion",
+        "Permutations and Combinations",
+        "Probability",
+        "Logical Reasoning",
+        "Puzzles"
+      ]
+    },
+    {
+      "id": "programming",
+      "name": "Programming Languages",
+      "teacherName": "Sujan Sir",
+      "teacherRole": "Lead Full-Stack Web & Software Architect",
+      "teacherImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
+      "description": "Debug code, understand syntax, build full-stack logic, and write clean production code with line-by-line feedback from Sujan Sir.",
+      "voiceConfig": {
+        "provider": "custom_authorized",
+        "voiceId": "sujan_sir_authorized_voice",
+        "voiceName": "Sujan Sir (Official Audio)",
+        "status": "active",
+        "audioSampleUrl": "/uploads/audio/sujan_sir_voice.mp4",
+        "pitch": 1,
+        "rate": 1
+      },
+      "sections": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Python",
+        "Java",
+        "C Programming",
+        "C++",
+        "Data Structures",
+        "Algorithms",
+        "Object-Oriented Programming",
+        "SQL",
+        "Debugging and Problem Solving"
+      ]
+    },
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "teacherName": "Dr. Ananya Mukherjee",
+      "teacherRole": "Senior Mathematics & Applied Calculus Faculty",
+      "teacherImage": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
+      "description": "Get step-by-step calculus derivations, linear algebra visualizations, matrices breakdown, and proofs.",
+      "voiceConfig": {
+        "provider": "elevenlabs",
+        "voiceId": "math_ananya_v1",
+        "voiceName": "Dr. Ananya (Math Voice)",
+        "status": "configured",
+        "audioSampleUrl": "/uploads/audio/math_sample.mp3",
+        "pitch": 1.05,
+        "rate": 0.98
+      },
+      "sections": [
+        "Algebra",
+        "Trigonometry",
+        "Calculus",
+        "Matrices",
+        "Differential Equations",
+        "Geometry",
+        "Statistics",
+        "Probability",
+        "Coordinate Geometry",
+        "Linear Algebra"
+      ]
+    },
+    {
+      "id": "genai",
+      "name": "Generative AI",
+      "teacherName": "kavya sri ",
+      "teacherRole": "Principal AI Engineer & LLM Specialist",
+      "teacherImage": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400",
+      "description": "Dive into LLM architecture, prompt engineering, RAG pipelines, Vector DBs, AI Agents, and automations.",
+      "voiceConfig": {
+        "provider": "elevenlabs",
+        "voiceId": "genai_vikram_v1",
+        "voiceName": "Vikramaditya (AI Lead)",
+        "status": "configured",
+        "audioSampleUrl": "/uploads/audio/genai_sample.mp3",
+        "pitch": 0.95,
+        "rate": 1.02
+      },
+      "sections": [
+        "Introduction to AI",
+        "Generative AI Fundamentals",
+        "Prompt Engineering",
+        "Large Language Models",
+        "ChatGPT",
+        "Gemini AI",
+        "AI Agents",
+        "LangChain",
+        "RAG",
+        "Vector Databases",
+        "AI Automation",
+        "n8n",
+        "API Integration"
+      ]
+    },
+    {
+      "id": "english",
+      "name": "English & Communication",
+      "teacherName": "Prof. Priya Nair",
+      "teacherRole": "Corporate Communication & Phonetics Expert",
+      "teacherImage": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&q=80&w=400",
+      "description": "Improve verbal communication, grammar, spoken fluency, accent neutralization, and placement interview pitch.",
+      "voiceConfig": {
+        "provider": "elevenlabs",
+        "voiceId": "english_priya_v1",
+        "voiceName": "Priya (English Accent Master)",
+        "status": "configured",
+        "audioSampleUrl": "/uploads/audio/english_sample.mp3",
+        "pitch": 1.1,
+        "rate": 1
+      },
+      "sections": [
+        "Grammar",
+        "Tenses",
+        "Parts of Speech",
+        "Articles",
+        "Prepositions",
+        "Vocabulary",
+        "Spoken English",
+        "Communication Skills",
+        "Reading Comprehension",
+        "Writing Skills",
+        "Interview Preparation",
+        "Public Speaking"
+      ]
+    }
+  ]
+}

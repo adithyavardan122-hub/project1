@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-fixed": "#e8ddff", "on-tertiary-fixed": "#21005e", "on-primary": "#002e6a", "on-primary-fixed-variant": "#004395", "surface": "#10131a", "primary-fixed": "#d8e2ff", "primary": "#aec6ff", "tertiary-fixed-dim": "#cebdff", "surface-tint": "#aec6ff", "surface-dim": "#10131a", "tertiary-container": "#9b7fed", "secondary-fixed": "#e3dfff", "outline": "#8c90a0", "surface-variant": "#32353c", "secondary": "#c3c0ff", "on-tertiary": "#381385", "on-surface-variant": "#c2c6d6", "primary-container": "#4d8eff", "on-background": "#e1e2eb", "on-tertiary-fixed-variant": "#4f319c", "on-primary-container": "#00285d", "on-secondary": "#1f00a4", "error": "#ffb4ab", "on-secondary-container": "#b3b0ff", "outline-variant": "#424754", "background": "#10131a", "surface-container-highest": "#32353c", "on-error": "#690005", "surface-container-lowest": "#0b0e14", "error-container": "#93000a", "inverse-on-surface": "#2e3037", "primary-fixed-dim": "#aec6ff", "surface-container-low": "#191c22", "on-secondary-fixed-variant": "#3522cb", "surface-bright": "#363940", "on-secondary-fixed": "#100069", "inverse-primary": "#005ac3", "on-surface": "#e1e2eb", "on-primary-fixed": "#001a42", "on-error-container": "#ffdad6", "surface-container-high": "#272a31", "inverse-surface": "#e1e2eb", "tertiary": "#cebdff", "surface-container": "#1d2026", "secondary-fixed-dim": "#c3c0ff", "on-tertiary-container": "#31057e", "secondary-container": "#3826ce" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-xl": "2.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "margin": "2rem", "space-2xs": "0.125rem", "space-2xl": "4rem" }, fontFamily: { "display-lg": ["Manrope"], "headline-sm": ["Manrope"], "label-sm": ["Hanken Grotesk"], "code-inline": ["Hanken Grotesk"], "body-lg": ["Hanken Grotesk"], "label-md": ["Hanken Grotesk"], "headline-lg": ["Manrope"], "headline-lg-mobile": ["Manrope"], "display-lg-mobile": ["Manrope"], "body-sm": ["Hanken Grotesk"], "headline-md": ["Manrope"], "body-md": ["Hanken Grotesk"] }, fontSize: { "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "code-inline": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.015em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#10131a;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary/20 selection:text-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.2)]"><div class="h-16 px-space-md flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Navigation menu" class="w-11 h-11 -ml-1 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/40 transition-colors shrink-0" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-space-xs min-w-0"><img alt="NIAT Students Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrBsU4HAoBAdiC5Ug1BPpnSZcSR-eOlEukH7D9L6k2oQ2XnCKF7zK3azrohximtmdf5qy8NKS_9G2v4yuRoX7c-Z0bmegXTA8Dzd5Ad5a06eC_XlT0NjCGbFYxbRuRVWrAaPaNhgByKH4dH-5UOXBfXYwBrJ1NVBhmOszt_Vc0gm-Q1UTNIR3xFsCFJrgD0cHew-w_BTOwUwHi1Zjgzls4WIfat5dIrN8NK_FHEJHcqp-A"/><div class="flex flex-col min-w-0 leading-tight"><div class="flex items-center gap-1"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface truncate">NIAT</span><span class="px-1.5 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm tracking-wide uppercase shrink-0">AI Voice</span></div><span class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline truncate">Home</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button class="hidden md:flex items-center justify-center px-3 h-9 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors" type="button">How It Works</button><a class="w-11 h-11 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity focus:outline-none shrink-0" data-path="profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADckLpVfr6FxlWezR6TVVmvu2R8Q9IUn0NG6jiRBqiyJJHdYOWfppKAvvU-7ocPc55UD0ZvSptcn16gv7sCFeLk7pHfeg1Q6aPtru_Rx6COXshB-QzKxO8F93Hg7D4VkKgVVIWFvWYnlWhg2nn6HMjomWBKt-OJl-FLQu8C4VvgLQae5950iZRxvit0fBDnlZbBOnOVqprMIa9JedvritYxK3DcyQGlga3_x-fcMcx"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full px-space-md py-space-sm space-y-space-md pb-6 select-none">
+<!-- Top Session Meta Status Card -->
+<div class="w-full bg-surface-container-low rounded-lg p-space-md shadow-sm">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-full object-cover shadow-md" data-alt="Warm, friendly portrait of Maya, an AI female engineering instructor with modern glasses, smiling intelligently against a subtle dark blue holographic background with soft rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjWBHkJUf7Tut4X1I4Ots8SMBK2-zrY4axaauqIoq30ZEJ3hj3Ai8EHZTiHru1oCrRIb7j4x8xgDzV4JouZkrP7stazPrTpGdkreus5SBTUdRiZTP800IKZgtMy88AY0LKDZE_6s-EAwvYTOkPbYfkQ3Yyog0nqGc95HDOHRgBcs7-z1LHNg9lPbOC9zIGAr454yh6Tsc7EAXDPSWIbK3jmZpgsUKkISjiltt8aQRI"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-primary-container rounded-full ring-2 ring-surface flex items-center justify-center">
+<span class="w-1.5 h-1.5 bg-surface-container-lowest rounded-full animate-ping"></span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">Maya</span>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm tracking-wide shrink-0">AI Mentor</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Data Structures &amp; Algorithms Mentor</span>
+</div>
+</div>
+<!-- Live latency & status badge -->
+<div class="flex flex-col items-end shrink-0">
+<div class="flex items-center gap-1.5 bg-surface-container-high px-2.5 py-1 rounded-full">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">24ms Latency</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Live Voice Stream</span>
+</div>
+</div>
+<!-- Active Unit Banner -->
+<div class="mt-space-sm pt-space-xs flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-1.5 min-w-0 text-primary">
+<span class="material-symbols-outlined text-[16px] shrink-0" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+<span class="font-label-sm text-label-sm truncate text-on-surface-variant">Unit 3: Recursion &amp; Memory Call Stack</span>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined text-[15px]">ios_share</span>
+<span class="font-label-sm text-label-sm">Export Notes</span>
+</button>
+</div>
+</div>
+<!-- Audio Waveform / Living Teacher State Card -->
+<div class="w-full bg-gradient-to-b from-surface-container via-surface-container-low to-surface-container-lowest rounded-lg p-space-md shadow-md flex flex-col items-center justify-center relative overflow-hidden">
+<!-- Ambient glow blur -->
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-48 h-48 bg-primary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+<!-- View Mode Selector Pill -->
+<div class="relative z-10 flex items-center bg-surface-container-highest/80 p-1 rounded-full mb-space-md">
+<button class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm" id="modeVoiceBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">spatial_audio</span>
+<span>Voice Conversation</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" id="modeBoardBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>Whiteboard &amp; Code</span>
+</button>
+</div>
+<!-- Central Interactive Waveform Aura -->
+<div class="relative z-10 flex flex-col items-center justify-center my-space-xs">
+<!-- Reactive Waveform bars -->
+<div class="flex items-center justify-center gap-1 h-14 px-4 py-2 bg-surface-container-lowest/60 rounded-full backdrop-blur-md" id="waveformDock">
+<span class="w-1 bg-primary/70 rounded-full h-3 animate-pulse"></span>
+<span class="w-1 bg-primary rounded-full h-6 animate-pulse" style="animation-delay: 120ms;"></span>
+<span class="w-1 bg-secondary rounded-full h-10 animate-pulse" style="animation-delay: 240ms;"></span>
+<span class="w-1 bg-primary-container rounded-full h-7 animate-pulse" style="animation-delay: 80ms;"></span>
+<span class="w-1.5 bg-primary rounded-full h-12 animate-pulse" style="animation-delay: 300ms;"></span>
+<span class="w-1 bg-tertiary rounded-full h-8 animate-pulse" style="animation-delay: 180ms;"></span>
+<span class="w-1 bg-secondary rounded-full h-11 animate-pulse" style="animation-delay: 90ms;"></span>
+<span class="w-1 bg-primary rounded-full h-5 animate-pulse" style="animation-delay: 210ms;"></span>
+<span class="w-1 bg-primary-container rounded-full h-3 animate-pulse" style="animation-delay: 350ms;"></span>
+</div>
+<!-- State descriptor chip -->
+<div class="flex items-center gap-1.5 mt-2 bg-surface-container-high/90 px-3 py-0.5 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary font-semibold" id="agentStateText">Maya is explaining Call Stacks</span>
+</div>
+</div>
+</div>
+<!-- Live Transcript Conversation Stream -->
+<div class="w-full flex flex-col space-y-space-md">
+<!-- Student Prompt Bubble -->
+<div class="flex items-start justify-end gap-space-sm">
+<div class="flex flex-col items-end max-w-[85%]">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">0:04 â€¢ You asked</span>
+<span class="font-label-sm text-label-sm text-primary">Audio Query</span>
+</div>
+<div class="bg-secondary-container text-on-secondary-container p-space-md rounded-2xl rounded-tr-sm shadow-sm">
+<p class="font-body-md text-body-md leading-relaxed">
+            â€œHey Maya, I'm struggling with Recursion and the Call Stack in Data Structures. Can you explain how the base case prevents a stack overflow?â€
+          </p>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">graphic_eq</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Voice transcribed accurately (99.4%)</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-secondary-fixed-dim/30 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+</div>
+<!-- Maya Voice Response & Interactive Pedagogical Breakdown -->
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div class="flex flex-col items-start max-w-[90%] space-y-space-sm">
+<div class="flex items-center gap-2 mb-0.5">
+<span class="font-label-sm text-label-sm font-bold text-primary">Maya</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">0:21 response â€¢ Live Voice</span>
+</div>
+<!-- Voice Audio Player Widget Bubble -->
+<div class="w-full bg-surface-container rounded-2xl rounded-tl-sm p-space-md shadow-sm space-y-space-sm">
+<!-- Voice Audio Player Bar -->
+<div class="flex items-center justify-between gap-space-sm bg-surface-container-highest/40 p-2.5 rounded-full">
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm active:scale-95 transition-transform" id="playPauseVoiceBtn" type="button">
+<span class="material-symbols-outlined text-[20px]" id="playIcon" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+<!-- Progress Line Indicator -->
+<div class="flex-1 flex flex-col justify-center px-1">
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full w-2/3 transition-all"></div>
+</div>
+<div class="flex justify-between items-center mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">0:14</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">0:21</span>
+</div>
+</div>
+<!-- Playback Speed Pill -->
+<button class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold hover:bg-surface-variant transition-colors" id="speedToggleBtn" type="button">
+              1.25x
+            </button>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Think of the <strong>Call Stack</strong> like a stack of cafeteria trays! Every time your function calls itself, Python pushes a new frame onto memory. Without a <strong>base case</strong>, it piles on forever until your computer screams â€˜Stack Overflowâ€™!
+          </p>
+<!-- Interactive Concept Card: Call Stack Trace -->
+<div class="w-full bg-surface-container-lowest rounded-lg p-space-sm space-y-space-xs mt-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-secondary uppercase tracking-wider">Memory Frame Visualization</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">LIFO (Last In, First Out)</span>
+</div>
+<!-- Stack Frame Blocks -->
+<div class="flex flex-col space-y-1.5 pt-1">
+<div class="w-full bg-surface-container-high/90 rounded px-2.5 py-1.5 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-code-inline text-code-inline text-primary">factorial(1) â†’ Base Case returns 1</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-primary/20 text-primary font-label-sm text-label-sm">Popped</span>
+</div>
+<div class="w-full bg-surface-container-high/60 rounded px-2.5 py-1.5 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">pause_circle</span>
+<span class="font-code-inline text-code-inline text-on-surface">factorial(2) â†’ waiting for (2 * 1)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pending</span>
+</div>
+<div class="w-full bg-surface-container-high/40 rounded px-2.5 py-1.5 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">pause_circle</span>
+<span class="font-code-inline text-code-inline text-on-surface">factorial(3) â†’ waiting for (3 * ?)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Root Frame</span>
+</div>
+</div>
+<!-- Recessed Code Block -->
+<div class="bg-surface-container-highest/30 rounded p-2 mt-2">
+<div class="flex justify-between items-center text-on-surface-variant mb-1 font-label-sm text-label-sm">
+<span>Python 3.12</span>
+<span class="text-primary font-medium">Safe Base Condition</span>
+</div>
+<pre class="font-code-inline text-code-inline text-on-surface overflow-x-auto"><code>def factorial(n):
+    if n &lt;= 1:   # &lt;-- The lifesaver base case!
+        return 1
+    return n * factorial(n - 1)</code></pre>
+</div>
+</div>
+<!-- Pedagogical Action Chips -->
+<div class="pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1.5">Suggested follow-ups:</span>
+<div class="flex flex-wrap gap-1.5">
+<button class="px-3 py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm transition-colors active:scale-95 flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px] text-primary">auto_stories</span>
+                Give me an analogy
+              </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm transition-colors active:scale-95 flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px] text-secondary">quiz</span>
+                Test me with a quiz
+              </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm transition-colors active:scale-95 flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px] text-tertiary">psychology_alt</span>
+                Explain more simply
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Voice Controls & Call Management Dock -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md shadow-lg flex flex-col items-center space-y-space-md">
+<div class="flex items-center justify-between w-full px-2">
+<!-- Mute Toggle -->
+<button aria-label="Mute mic" class="w-11 h-11 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface flex items-center justify-center transition-colors active:scale-90" id="muteBtn" type="button">
+<span class="material-symbols-outlined text-[22px]" id="muteIcon">mic</span>
+</button>
+<!-- Central Glowing Primary Mic Pulse Button -->
+<div class="relative flex items-center justify-center">
+<!-- Multi-layer ripple circles -->
+<span class="absolute w-20 h-20 rounded-full bg-primary-container/20 animate-ping pointer-events-none"></span>
+<span class="absolute w-16 h-16 rounded-full bg-primary/25 blur-sm pointer-events-none"></span>
+<button class="relative z-10 w-16 h-16 rounded-full bg-gradient-to-tr from-secondary-container via-primary-container to-primary flex items-center justify-center text-on-primary shadow-xl hover:scale-105 active:scale-95 transition-all" id="mainMicTrigger" type="button">
+<span class="material-symbols-outlined text-[32px] text-on-primary-container" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+</div>
+<!-- Interrupt / Pause Maya's Speech -->
+<button class="w-11 h-11 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface flex items-center justify-center transition-colors active:scale-90" id="pauseTeacherBtn" title="Interrupt Maya" type="button">
+<span class="material-symbols-outlined text-[22px]">stop</span>
+</button>
+</div>
+<!-- Interaction Instruction Feedback -->
+<div class="flex flex-col items-center text-center">
+<span class="font-label-md text-label-md font-bold text-on-surface">Tap mic to speak â€¢ Hold for continuous talk</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Maya listens naturally without wake words</span>
+</div>
+<!-- Auxiliary Control Pill Bar -->
+<div class="w-full flex items-center justify-between pt-space-xs bg-surface-container-lowest/50 px-space-md py-2 rounded-lg">
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">keyboard</span>
+<span class="font-label-sm text-label-sm">Type prompt</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_add</span>
+<span class="font-label-sm text-label-sm">Save to Study List</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initVoiceAgentMaya() {
+    const playPauseBtn = document.getElementById('playPauseVoiceBtn');
+    const playIcon = document.getElementById('playIcon');
+    const agentStateText = document.getElementById('agentStateText');
+    const muteBtn = document.getElementById('muteBtn');
+    const muteIcon = document.getElementById('muteIcon');
+    const pauseTeacherBtn = document.getElementById('pauseTeacherBtn');
+    const mainMicTrigger = document.getElementById('mainMicTrigger');
+    const modeVoiceBtn = document.getElementById('modeVoiceBtn');
+    const modeBoardBtn = document.getElementById('modeBoardBtn');
+    const speedToggleBtn = document.getElementById('speedToggleBtn');
+
+    let isSpeaking = true;
+    let isMuted = false;
+    let speedIdx = 1;
+    const speeds = ['1.0x', '1.25x', '1.5x'];
+
+    // Play/Pause Response Audio
+    if (playPauseBtn && playIcon) {
+      playPauseBtn.addEventListener('click', () => {
+        isSpeaking = !isSpeaking;
+        playIcon.textContent = isSpeaking ? 'pause' : 'play_arrow';
+        if (agentStateText) {
+          agentStateText.textContent = isSpeaking 
+            ? 'Maya is explaining Call Stacks' 
+            : 'Response paused by student';
+        }
+      });
+    }
+
+    // Speed cycling
+    if (speedToggleBtn) {
+      speedToggleBtn.addEventListener('click', () => {
+        speedIdx = (speedIdx + 1) % speeds.length;
+        speedToggleBtn.textContent = speeds[speedIdx];
+      });
+    }
+
+    // Mic Mute toggle
+    if (muteBtn && muteIcon) {
+      muteBtn.addEventListener('click', () => {
+        isMuted = !isMuted;
+        muteIcon.textContent = isMuted ? 'mic_off' : 'mic';
+        muteBtn.classList.toggle('text-error', isMuted);
+      });
+    }
+
+    // Interrupt Teacher
+    if (pauseTeacherBtn && agentStateText) {
+      pauseTeacherBtn.addEventListener('click', () => {
+        isSpeaking = false;
+        if (playIcon) playIcon.textContent = 'play_arrow';
+        agentStateText.textContent = 'Maya paused. Ready for your query.';
+      });
+    }
+
+    // Push to talk micro-interaction
+    if (mainMicTrigger && agentStateText) {
+      mainMicTrigger.addEventListener('mousedown', () => {
+        agentStateText.textContent = 'Listening to your voice...';
+      });
+      mainMicTrigger.addEventListener('mouseup', () => {
+        agentStateText.textContent = 'Thinking and processing doubt...';
+        setTimeout(() => {
+          agentStateText.textContent = 'Maya is answering...';
+        }, 800);
+      });
+      mainMicTrigger.addEventListener('touchstart', () => {
+        agentStateText.textContent = 'Listening to your voice...';
+      });
+      mainMicTrigger.addEventListener('touchend', () => {
+        agentStateText.textContent = 'Thinking and processing doubt...';
+        setTimeout(() => {
+          agentStateText.textContent = 'Maya is answering...';
+        }, 800);
+      });
+    }
+
+    // Mode toggling
+    if (modeVoiceBtn && modeBoardBtn) {
+      modeVoiceBtn.addEventListener('click', () => {
+        modeVoiceBtn.className = 'flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm';
+        modeBoardBtn.className = 'flex items-center gap-1.5 px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all';
+      });
+      modeBoardBtn.addEventListener('click', () => {
+        modeBoardBtn.className = 'flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm';
+        modeVoiceBtn.className = 'flex items-center gap-1.5 px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all';
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-2xl shadow-[0_-4px_24px_rgba(0,0,0,0.4)]" data-active-classes="text-primary font-bold"><div class="relative flex justify-around items-center h-16 px-space-xs max-w-lg mx-auto"><a class="flex flex-col items-center justify-center flex-1 h-full min-w-[44px] text-on-surface-variant transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center flex-1 h-full min-w-[44px] text-on-surface-variant transition-colors" data-path="subjects" href="#"><span class="material-symbols-outlined text-[24px]">auto_stories</span><span class="font-label-sm text-label-sm mt-0.5">Subjects</span></a><div class="flex flex-col items-center justify-center flex-1 relative -top-3"><a class="w-14 h-14 rounded-full bg-gradient-to-tr from-secondary-container via-primary-container to-primary flex items-center justify-center text-on-primary shadow-[0_0_24px_rgba(77,142,255,0.45)] hover:shadow-[0_0_32px_rgba(77,142,255,0.7)] transition-all hover:scale-105 active:scale-95" data-path="voice-doubt" href="#"><span class="material-symbols-outlined text-[28px] text-on-primary-container">mic</span></a><span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Doubt</span></div><a class="flex flex-col items-center justify-center flex-1 h-full min-w-[44px] text-on-surface-variant transition-colors" data-path="teachers" href="#"><span class="material-symbols-outlined text-[24px]">psychology</span><span class="font-label-sm text-label-sm mt-0.5">Teachers</span></a><a class="flex flex-col items-center justify-center flex-1 h-full min-w-[44px] text-on-surface-variant transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></div></nav></body></html>
